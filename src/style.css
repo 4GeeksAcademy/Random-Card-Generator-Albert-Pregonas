@@ -1,5 +1,87 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body{
-    background: blue;
+    background-color: green;
 }
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 125px;
+    margin-left: 50px;
+}
+
+.custom-span {
+    width: 9vh
+  }
+
+#hidden{
+    background: url("https://opengameart.org/sites/default/files/card%20back%20red.png") no-repeat center center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+#hidden:hover{
+    transform: scale(1.03);
+}
+
+#hidden.moved {
+    transform: translate(300px, 300px); /* Mover a la posición X=300px, Y=300px */
+}
+
+.cardbox{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: relative;
+}
+
+.card{
+    width: 50vh;
+    height: 70vh;
+    border-radius: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    transition: transform 0.2s ease-in-out;
+}
+
+.corner {
+    position: absolute;
+}
+
+.center{
+    font-size: 8em;
+    position: absolute;
+}
+
+.top-left {
+    top: 10px;
+    left: 10px;
+    margin-left: 20px;
+    font-size: 6em;
+}
+
+.bottom-right {
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(180deg);
+    margin-right: 20px;
+    font-size: 6em;
+}
+
+.suit-diamonds, .suit-hearts {
+    color: red;
+}
+
+.suit-spades, .suit-clubs {
+    color: black;
+}
+
+/* Para modificar el font size del número y los iconos (NO FUNCIONA)*/
